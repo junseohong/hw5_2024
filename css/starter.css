@@ -46,7 +46,7 @@ header {
   display: flex;
   flex-direction: column; /* Children of card stack vertically */
   align-items: center; /* Center-align the card's content */
-  text-align: center; /* Center-align text for consistency */
+  text-align: left; /* Center-align text for consistency */
   min-width: 0;
   min-height: 0;
   background: #fff;
@@ -81,12 +81,14 @@ header {
 
 .card > ul > li {
   margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .card > ul > li > header {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 99%;
   margin : auto;
 }
 
@@ -216,13 +218,14 @@ footer > p {
   }
 
   .card > ul > li {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .card > ul > li:first-child {
     margin-left: 0px;
-    margin-right: 0px;
+    margin-right: 10px;
+    text-align: left;
   }
 
   .pricing {
@@ -230,15 +233,21 @@ footer > p {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: -1;
+    z-index: -1; /* allows the cards to be underneath the header when scrolling */
     margin: auto;
   }
 
   .card > header{
     position: relative;
-    z-index: -1;
+    z-index: -1; /* allows the cards to be underneath the header when scrolling */
     align-items:flex-start;
   }
+
+  .card > ul > li > header {
+    width: 85%;
+    text-align: left;
+  }
+  
 }
 
 /* Print Styles */
@@ -250,8 +259,11 @@ footer > p {
   }
 
   .nav_links {
+    display: flex;
     flex-direction: row;
-    margin : 0px 300px;
+    justify-content: space-between;
+    column-gap: 180px;
+    margin-bottom: -20px;
   }
 
   #pricing {
@@ -270,6 +282,15 @@ footer > p {
       border-top-left-radius: 50px; 
       border-top-right-radius: 50px; 
     }
+  
+  .card > ul {
+    text-align: left;
+  }
+
+  .card > ul > li {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
   
   .card > header {
     margin-top : 0px;

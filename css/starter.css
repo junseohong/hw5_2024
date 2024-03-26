@@ -289,6 +289,15 @@ footer > p {
     margin-top: 300px;
   }
 
+  .card li:nth-child(2):after {
+    content: '\1F44D'; /* Unicode for thumbs up emoji */
+    font-size: 1.2rem; /* Adjust size as needed */
+    display: inline-flex;
+    position: right;
+    margin-right: 0.5em; /* Space after the thumbs up */
+  }
+
+}
 /* Animations */
 @keyframes logo-grow {
   from {
@@ -319,4 +328,4 @@ footer > p {
 /* Specific styles for visual consistency */
 .nav_item a:visited {
   color: blue;
-}}
+}

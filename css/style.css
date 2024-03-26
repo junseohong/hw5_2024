@@ -1,0 +1,352 @@
+/* Import the Poppins font and set base body styles */
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+body {
+  font-family: 'Poppins', serif;
+  background-image: url('images/concrete_seamless.png');
+  background-color: #f1f1f1;
+  font-size: 1.3rem; /* Used rem for scalability */
+  padding: 0;
+}
+
+/* link styles and  base styles for the header and navigation */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-bottom: 3px solid #50C7C7;
+  padding-bottom: 1em;
+}
+
+.nav_links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.nav_item a {
+  padding: 0.625em;
+  color: blue; /* This sets the text color to blue */
+  text-decoration: underline; /* This underlines the text */
+}
+
+/* Set base styles for card elements */
+.card {
+  margin: 1rem; /* Margin around the card */
+  display: flex;
+  flex-direction: column; /* Children of card stack vertically */
+  align-items: center; /* Center-align the card's content */
+  text-align: left; /* Center-align text for consistency */
+  min-width: 0;
+  min-height: 0;
+  background: #fff;
+  width: 450px;
+  margin-bottom: 100px;
+}
+
+.card:last-child {
+  margin-bottom: 0px;
+}
+
+/* Header inside card */
+.card > header {
+  border: 2px solid #45ADAD; /* Card border color and width */
+  border-width: 30%;
+  background: #288088; /* Header background inside card */
+  color: white; /* Text color */
+  padding: 20px 0; /* Padding top and bottom */
+  margin-top: -100px;
+  width: 100%; /* Full width */
+  border-top-left-radius: 50px; /* Rounded corner top left */
+  border-top-right-radius: 50px; /* Rounded corner top right */
+  font-size: 4rem;
+  align-items: center; /* Center-align the card's content */
+  text-align: center; /* Center-align text for consistency */
+}
+
+.card > ul {
+  width: 100%;
+  align-items: center;
+}
+
+.card > ul > li {
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.card > ul > li > header {
+  display: flex;
+  flex-direction: column;
+  width: 99%;
+  margin : auto;
+}
+
+.card > button {
+  font-family: 'Poppins', serif;
+  font-size: 1rem;
+  background: #288088; /* Header background inside card */
+  color: white; /* Text color */
+  border-radius: 2px;
+  border: 2px solid #288088; /* Card border color and width */
+  width: 80%;
+  padding: 5px 12px;
+  align-items: center; /* Center-align the card's content */
+  text-align: center; /* Center-align text for consistency */
+  margin-bottom: 20px;
+}
+
+
+/* Style the pricing section */
+.pricing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  padding: 10px;
+  font-weight: 500;
+  margin: 20px;
+}
+
+h4 {
+  position: relative;
+  bottom: -15px;
+}
+
+#pricing {
+  font-family: 'Poppins', serif;
+  text-align: center;
+  font-size: 1.8rem;
+  padding-bottom: 100px;
+  margin-top: 10px;
+  font-weight: 900;
+}
+
+#gallery {
+  font-family: 'Poppins', serif;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 10px;
+  font-weight: 900;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Style the gallery images */
+.gallery img {
+  border: 10px solid #50C7C7;
+  margin: 10px;
+  width: 300px; 
+}
+
+/* Footer Styling based on Screenshot */
+footer{
+  display: flex;
+  flex-direction: column;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+footer > p {
+  margin: 20px 80px;
+}
+
+/* Skip to main appears after animations loads up by pressing tab key*/
+.skip {
+  position: absolute;
+  top: -100px; 
+  left: 0;
+  background: #FFF; 
+  color: #000; 
+  padding: 8px;
+  z-index: 100; 
+  border: 1px solid #000; 
+  border-radius: 3px;
+  transition: top 0.3s;
+}
+
+.skip:focus {
+  top: 30px; 
+}
+
+
+
+/* Media Queries for Responsive Design */
+@media (min-width: 900px) {
+  body > header {
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding-bottom: 0px;
+  }
+
+  .nav_links {
+    flex-direction: row;
+  }
+
+  .card {
+    position: relative;
+    z-index: -1;
+    margin-bottom: 0px;
+    width: 275px;
+  }
+
+  .card > ul {
+    text-align: left;
+  }
+
+  .card > ul > li {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .card > ul > li:first-child {
+    margin-left: 0px;
+    margin-right: 10px;
+    text-align: left;
+  }
+
+  .pricing {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -1; /* allows the cards to be underneath the header when scrolling */
+    margin: auto;
+  }
+
+  .card > header{
+    position: relative;
+    z-index: -1; /* allows the cards to be underneath the header when scrolling */
+    align-items:flex-start;
+  }
+
+  .card > ul > li > header {
+    width: 85%;
+    text-align: left;
+  }
+  
+}
+
+/* Print Styles */
+@media print {
+  body{
+    font-family: Arial, Helvetica;
+    background-image: none;
+    color: #000;
+  }
+
+  .nav_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 180px;
+    margin-bottom: -20px;
+  }
+
+  #pricing {
+    font-family: Arial, Helvetica;
+    font-weight: 500;
+  }
+
+  .gallery, #gallery {
+    display: none;
+  }
+
+  .card {
+      margin-top: -80px;
+      border: 2px solid #45ADDD;
+      flex-basis: 325px;
+      border-top-left-radius: 50px; 
+      border-top-right-radius: 50px; 
+    }
+  
+  .card > ul {
+    text-align: left;
+  }
+
+  .card > ul > li {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .card > header {
+    margin-top : 0px;
+  }
+  
+  .card:last-child {
+    margin-bottom: 100px;
+  }
+
+  .pricing {
+    flex-direction: row;
+    align-items: flex-end;
+    page-break-inside: avoid; 
+  }
+
+  footer {
+    margin-top: 300px;
+  }
+
+  .card li:nth-child(2):after {
+    content: '\1F44D'; /* Unicode for thumbs up emoji */
+    font-size: 1.2rem; /* Adjust size as needed */
+    display: inline-flex;
+    position: right;
+    margin-right: 0.5em; /* Space after the thumbs up */
+  }
+
+}
+/* Animations */
+@keyframes logo-grow {
+  from {
+    width: 25px;
+    opacity: 0;
+  }
+  to {
+    width: 475px;
+    opacity: 1;
+  }
+}
+
+#logo {
+  animation: logo-grow 5s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #logo {
+    animation: none;
+  }
+}
+
+/* Accessibility */
+*:focus {
+  outline: 3px solid #50C7C7;
+}
+
+/* Specific styles for visual consistency */
+.nav_item a:visited {
+  color: blue;
+}
